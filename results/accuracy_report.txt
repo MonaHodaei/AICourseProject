@@ -1,0 +1,31 @@
+=====================================================================================
+Class                    Points  Precision   Recall       F1      IoU
+=====================================================================================
+  Unlabeled                   0      0.000    0.000    0.000    0.000
+  Bridge-Deck,Beam&Girder      125      1.000    1.000    1.000    1.000
+  Bridge-Abutment&Wing wall        0      0.000    0.000    0.000    0.000
+  Bridge-Pier             1,740      1.000    1.000    1.000    1.000
+  Man-made terrain        1,745      1.000    1.000    1.000    1.000
+  Natural terrain       440,621      1.000    1.000    1.000    1.000
+  Vegetation            986,414      1.000    1.000    1.000    1.000
+  Buildings             701,226      1.000    1.000    1.000    1.000
+  Remaining hardscape         0      0.000    0.000    0.000    0.000
+  Scanning artifacts     15,598      1.000    1.000    1.000    1.000
+=====================================================================================
+  Overall Accuracy     2,147,469                                 1.000
+  Mean IoU (non-empty)                                          1.000
+  Mean F1 (non-empty)                                  1.000
+=====================================================================================
+
+Confusion Matrix (rows=pred, cols=GT):
+                        Unlabele  Bridge-D  Bridge-A  Bridge-P  Man-made  Natural   Vegetati  Building  Remainin  Scanning
+  Unlabeled                    0         0         0         0         0         0         0         0         0         0
+  Bridge-Deck,Beam&Girder         0       125         0         0         0         0         0         0         0         0
+  Bridge-Abutment&Wing wall         0         0         0         0         0         0         0         0         0         0
+  Bridge-Pier                  0         0         0     1,740         0         0         0         0         0         0
+  Man-made terrain             0         0         0         0     1,745         0         0         0         0         0
+  Natural terrain              0         0         0         0         0   440,621         0         0         0         0
+  Vegetation                   0         0         0         0         0         0   986,414         0         0         0
+  Buildings                    0         0         0         0         0         0         0   701,226         0         0
+  Remaining hardscape          0         0         0         0         0         0         0         0         0         0
+  Scanning artifacts           0         0         0         0         0         0         0         0         0    15,598

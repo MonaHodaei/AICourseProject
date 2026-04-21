@@ -1,0 +1,13 @@
+# Large data files
+Dataset/Raw/
+Dataset/Preparation/
+Dataset/Train/
+Dataset/Test/
+
+# Checkpoints
+checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
