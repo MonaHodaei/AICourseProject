@@ -434,7 +434,7 @@ D_IN            = 5
 
 **Expected Output:**
 - Printed per-class metrics table in the notebook
-- `results/accuracy_report.txt` — saved human-readable performance summary
+- `results/accuracy_report.txt` — saved performance summary
 - `results/confusion_matrix.txt` — saved confusion matrix
 
 ---
@@ -554,7 +554,7 @@ The LiDAR dataset used in this project was collected as part of a collaborative 
 
 A small trial sample — one preprocessed, labeled test tile — is made available via Google Drive for demonstration and reproducibility purposes (see [Downloads](#downloads--data--checkpoints)). This tile is sufficient to run Steps 3 and 4 of the pipeline (inference and evaluation) using the provided Purdue checkpoint.
 
-If you require access to additional data for research purposes, please contact (mhodaei@purdue.edu).
+If you require access to additional data for research purposes, please contact my email.
 
 ---
 
