@@ -125,21 +125,18 @@ python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA avail
 
 After activating the conda environment, install any remaining dependencies and build the C++ wrappers used by RandLA-Net's KNN operations.
 
-### Step 1 — Activate Environment
+### Step 1 — Create and Activate Environment
 
 ```bash
+conda env create -f environment.yml
 conda activate randlanet
 ```
 
-### Step 2 — Install torch-points-kernels (if not installed via pip)
+---
 
-```bash
-pip install torch-points-kernels==0.7.0
-```
+### Step 2 — Build C++ Wrappers
 
-> If `torch-points-kernels` fails to install on your system, the codebase will automatically fall back to `torch_points` (slower but functional).
-
-### Step 3 — Build C++ Wrappers (Optional, for faster KNN)
+Run this **before** installing `torch-points-kernels`, while `numpy=1.23.5` is still intact:
 
 ```bash
 cd utils/cpp_wrappers
@@ -147,22 +144,44 @@ sh compile_wrappers.sh
 cd ../..
 ```
 
-### Step 4 — Install Jupyter (if running notebooks interactively)
+---
+
+### Step 3 — Install torch-points-kernels
 
 ```bash
-pip install notebook
+pip install torch-points-kernels==0.7.0
 ```
 
-### Step 5 — Verify All Imports
+> **Note:** This will downgrade numpy to `1.19.5`. That is expected — fix it in the next step.
+
+---
+
+### Step 4 — Restore numpy
+
+```bash
+pip install "numpy==1.23.5" --force-reinstall
+```
+
+This restores numpy compatibility with pandas, which is required for the preprocessing notebook.
+
+---
+
+### Step 5 — Verify Installation
 
 ```bash
 python -c "
+import numpy as np
+import pandas as pd
 import torch
-from model import RandLANet
-from utils.metrics import accuracy, intersection_over_union
-print('All core imports successful.')
+from torch_points_kernels import knn
+print('numpy:', np.__version__)
+print('pandas:', pd.__version__)
+print('torch:', torch.__version__)
+print('CUDA:', torch.cuda.is_available())
+print('torch_points_kernels: OK')
 "
 ```
+
 
 ---
 
