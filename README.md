@@ -321,7 +321,7 @@ NUM_POINTS    = 20480  # Points sampled per training tile (must be divisible by 
 
 ### `train.ipynb` — Training from Scratch
 
-**Purpose:** Trains a RandLA-Net model from random initialization on the labeled Purdue bridge and highway dataset.
+**Purpose:** Trains a RandLA-Net model from random initialization on the labeled Purdue bridge components and highway infrastructure dataset.
 
 **Required Inputs:**
 - Labeled tile `.txt` files in `Dataset/Train/` — format: `X Y Z Intensity PointSourceID Label`
@@ -362,7 +362,7 @@ tensorboard --logdir runs/training
 
 ### `transferlearning.ipynb` — Transfer Learning (Recommended)
 
-**Purpose:** Fine-tunes a RandLA-Net model pretrained on Semantic3D onto the Purdue bridge and highway dataset using a two-stage transfer learning strategy.
+**Purpose:** Fine-tunes a RandLA-Net model pretrained on Semantic3D onto the Purdue bridge components and highway infrastructure dataset using a two-stage transfer learning strategy.
 
 **Required Inputs:**
 - `checkpoints/randlanet_semantic3d.pth` — pretrained Semantic3D weights
@@ -546,17 +546,7 @@ Training convergence (500 epochs, transfer learning):
 
 ---
 
-## Citation
 
-If you use this code or dataset in your research, please cite:
-
-```
-Hodaei, M. (2026). Semantic Segmentation of Bridge Components and Highway Infrastructure
-from Mobile LiDAR Data. Published as a conference paper at ICLR 2026.
-Lyles School of Civil and Construction Engineering, Purdue University.
-```
-
----
 
 ## Data Availability
 
@@ -564,7 +554,7 @@ The LiDAR dataset used in this project was collected as part of a collaborative 
 
 A small trial sample — one preprocessed, labeled test tile — is made available via Google Drive for demonstration and reproducibility purposes (see [Downloads](#downloads--data--checkpoints)). This tile is sufficient to run Steps 3 and 4 of the pipeline (inference and evaluation) using the provided Purdue checkpoint.
 
-If you require access to additional data for research purposes, please contact the Lyles School of Civil and Construction Engineering at Purdue University.
+If you require access to additional data for research purposes, please contact (mhodaei@purdue.edu).
 
 ---
 
@@ -577,10 +567,10 @@ This codebase was developed as part of the ICLR 2026 paper by Mona Hodaei. The f
 | `utils/metrics.py` | Borrowed from [aRI0U/RandLA-Net-pytorch](https://github.com/aRI0U/RandLA-Net-pytorch/tree/master/utils) |
 | `utils/ply.py` | Borrowed from [aRI0U/RandLA-Net-pytorch](https://github.com/aRI0U/RandLA-Net-pytorch/tree/master/utils) |
 | `model.py` | Originally written by the author, inspired by [aRI0U/RandLA-Net-pytorch](https://github.com/aRI0U/RandLA-Net-pytorch) and the [Open3D-ML](https://github.com/isl-org/Open3D-ML) implementation of RandLA-Net; edited with assistance from LLM tools and online references |
-| All notebooks (`point_cloud_processing.ipynb`, `train.ipynb`, `transferlearning.ipynb`, `test.ipynb`, `quantitative_Evaluation.ipynb`) | Written by the author; edited and refined with assistance from LLM tools and online references |
+| All notebooks (`point_cloud_processing.ipynb`, `train.ipynb`, `transferlearning.ipynb`, `test.ipynb`, `quantitative_Evaluation.ipynb`) | Written by the author; edited and refined with assistance from online tools and references |
 
 ---
 
 ## Acknowledgments
 
-Data was collected using the Purdue Wheel-Based Mobile Mapping System along Indiana interstate highways, as part of a project with the Indiana Department of Transportation (INDOT). The RandLA-Net architecture is based on [Hu et al., CVPR 2020](https://arxiv.org/abs/1911.11236). Pretraining was performed on the [Semantic3D benchmark](http://www.semantic3d.net/). Utility functions (`metrics.py`, `ply.py`) and structural inspiration for `model.py` are credited to [aRI0U/RandLA-Net-pytorch](https://github.com/aRI0U/RandLA-Net-pytorch/tree/master/utils) and [Open3D-ML](https://github.com/isl-org/Open3D-ML).
+Data was collected using the Purdue Wheel-Based Mobile Mapping System along Indiana interstate highways, as part of a project with the Indiana Department of Transportation (INDOT). The RandLA-Net architecture is based on [Hu et al., CVPR 2020](https://arxiv.org/abs/1911.11236). Pretraining was performed on the [Semantic3D](https://semantic3d.ethz.ch/). Utility functions (`metrics.py`, `ply.py`) and structural inspiration for `model.py` are credited to [aRI0U/RandLA-Net-pytorch](https://github.com/aRI0U/RandLA-Net-pytorch/tree/master/utils) and [Open3D-ML](https://github.com/isl-org/Open3D-ML).
