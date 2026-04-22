@@ -536,7 +536,7 @@ Quantitative test results for the four I-465 highway tiles:
 | Tile 3 | 3,936,656 | 83% |
 | Tile 4 | 2,694,649 | 95% |
 
-Training convergence (500 epochs, transfer learning):
+Training convergence (700 epochs, transfer learning):
 
 | Metric | Training | Validation |
 |--------|----------|------------|
