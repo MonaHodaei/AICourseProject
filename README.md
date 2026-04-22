@@ -84,7 +84,7 @@ Due to data sharing restrictions (INDOT–Purdue University research agreement) 
 2. Place the trial test tile into the `Dataset/Test/` folder:
    ```
    Dataset/Test/
-   └── tile_0010_local_selected.txt
+   └── Test.txt
    ```
 
 The repo is then ready to run from **Step 3 (inference)** onwards using the trial tile and the provided Purdue checkpoint. To run the full pipeline from scratch including training, you will need to supply your own labeled dataset.
