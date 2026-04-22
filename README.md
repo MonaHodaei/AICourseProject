@@ -125,10 +125,9 @@ python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA avail
 
 After activating the conda environment, install any remaining dependencies and build the C++ wrappers used by RandLA-Net's KNN operations.
 
-### Step 1 — Create and Activate Environment
+### Step 1 —  Activate Environment
 
 ```bash
-conda env create -f environment.yml
 conda activate randlanet
 ```
 
