@@ -214,7 +214,7 @@ RandLA-Net-pytorch/
 │   │   ├── 2.Localized/                   # After zero-centering (local coordinates)
 │   │   └── 3.Ordered/                     # After column reordering for model input
 │   ├── Train/                             # Labeled training tiles — not publicly available (INDOT–Purdue agreement); see Downloads for trial sample
-│   └── Test/                              # Labeled test tiles — trial samples available on Google Drive (see Downloads)
+│   └── Test/                              # test tiles — trial samples available on Google Drive (see Downloads)
 │
 ├── checkpoints/
 │   ├── randlanet_semantic3d.pth            # Stage 1: weights pretrained on the Semantic3D benchmark — download from Google Drive (see Downloads)
@@ -392,7 +392,7 @@ tensorboard --logdir runs/transfer_learning
 
 ### `test.ipynb` — Inference / Prediction
 
-**Purpose:** Applies the trained RandLA-Net model to unlabeled or labeled test tiles and saves per-point predictions.
+**Purpose:** Applies the trained RandLA-Net model to unlabeled test tiles and saves per-point predictions.
 
 **Required Inputs:**
 - Test tile `.txt` files in `Dataset/Test/` — format: `X Y Z Intensity PointSourceID [Label]`
@@ -427,7 +427,7 @@ D_IN            = 5
 
 **Required Inputs:**
 - Prediction `.txt` file (output of `test.ipynb`)
-- Ground truth `.txt` file (labeled tile from `Dataset/Test/`)
+- Ground truth `.txt` file (labeled tile from `CloudCompare`)
 
 **Processing:**
 - Aligns prediction and ground truth point sets (uses KDTree matching if point counts differ)
@@ -555,7 +555,7 @@ Training convergence (700 epochs, transfer learning):
 
 The LiDAR dataset used in this project was collected as part of a collaborative research project between the **Indiana Department of Transportation (INDOT)** and **Purdue University**. Due to the terms of this partnership, the full dataset cannot be publicly shared.
 
-A small trial sample — one preprocessed, labeled test tile — is made available via Google Drive for demonstration and reproducibility purposes (see [Downloads](#downloads--data--checkpoints)). This tile is sufficient to run Steps 3 and 4 of the pipeline (inference and evaluation) using the provided Purdue checkpoint.
+4 small trial samples, preprocessed test tile, are available via Google Drive for demonstration and reproducibility purposes (see [Downloads](#downloads--data--checkpoints)). These tiles are sufficient to run Steps 3 and 4 of the pipeline (inference and evaluation) using the provided Purdue checkpoint.
 
 If you require access to additional data for research purposes, please contact my email.
 
