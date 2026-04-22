@@ -30,7 +30,7 @@ This project implements a semantic segmentation framework for classifying **brid
 
 **Deep Learning Backbone — RandLA-Net:** RandLA-Net is adopted as the core architecture for efficient processing of large-scale, unstructured point cloud data. It uses an encoder-decoder structure with Local Feature Aggregation (LFA) modules combining random sampling, local spatial encoding, and attentive pooling.
 
-**Two-Stage Transfer Learning:** The model is first pretrained on the large-scale [Semantic3D](http://www.semantic3d.net/](https://semantic3d.ethz.ch/) benchmark, then fine-tuned on a domain-specific Purdue bridge and highway dataset. This substantially reduces the need for extensive manual annotation.
+**Two-Stage Transfer Learning:** The model is first pretrained on the large-scale [Semantic3D](https://semantic3d.ethz.ch/) benchmark, then fine-tuned on a domain-specific Purdue bridge and highway dataset. This substantially reduces the need for extensive manual annotation.
 
 **Structured Annotation Workflow:** A consistent labeling pipeline using [CloudCompare](https://www.cloudcompare.org/) ensures dataset reliability across nine semantic classes covering both bridge components and the highway infrastructure.
 
