@@ -168,7 +168,6 @@ This restores numpy compatibility with pandas, which is required for the preproc
 
 ```bash
 pip install notebook
-jupyter notebook
 ```
 
 ---
