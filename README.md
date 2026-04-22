@@ -164,8 +164,15 @@ pip install "numpy==1.23.5" --force-reinstall
 This restores numpy compatibility with pandas, which is required for the preprocessing notebook.
 
 ---
+### Step 5 — Install Kernel
 
-### Step 5 — Verify Installation
+```bash
+pip install notebook
+jupyter notebook
+```
+
+---
+### Step 6 — Verify Installation
 
 ```bash
 python -c "
