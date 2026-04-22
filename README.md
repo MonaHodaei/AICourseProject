@@ -68,9 +68,9 @@ Due to data sharing restrictions (INDOT–Purdue University research agreement) 
 
 | Item | Description | Link |
 |------|-------------|------|
-| `randlanet_semantic3d.pth` | Stage 1 pretrained checkpoint (Semantic3D benchmark) | [INSERT GOOGLE DRIVE LINK] |
-| `randlanet_Purdue.pth` | Stage 2 final checkpoint (fine-tuned on Purdue bridge & highway dataset) | [INSERT GOOGLE DRIVE LINK] |
-| Trial test tile (`tile_0010_local_selected.txt`) | One preprocessed, labeled test tile for demo purposes | [INSERT GOOGLE DRIVE LINK] |
+| `randlanet_semantic3d.pth` | Stage 1 pretrained checkpoint (Semantic3D benchmark) | [GOOGLE DRIVE LINK] |
+| `randlanet_Purdue.pth` | Stage 2 final checkpoint (fine-tuned on Purdue bridge components & highway infrusturcture dataset) | [GOOGLE DRIVE LINK] |
+| Trial test tile (`Test.txt`) | One preprocessed, labeled test tile for demo purposes | [GOOGLE DRIVE LINK] |
 
 ### Setup after downloading
 
