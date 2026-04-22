@@ -560,7 +560,7 @@ If you require access to additional data for research purposes, please contact (
 
 ## Code Attribution
 
-This codebase was developed as part of the ICLR 2026 paper by Mona Hodaei. The following attribution applies to individual components:
+This codebase was developed as part of AI course project by Mona Hodaei. The following attribution applies to individual components:
 
 | File | Origin |
 |------|--------|
