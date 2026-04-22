@@ -24,7 +24,7 @@
 
 ## Project Overview
 
-This project implements a semantic segmentation framework for classifying **bridge components and highway infrastructure** from large-scale mobile LiDAR point clouds. Data is acquired using the **Purdue Wheel-Based Mobile Mapping System (MMS)** along Indiana interstate highways.
+This project implements a semantic segmentation framework for classifying **bridge components and highway infrastructure** from large-scale mobile LiDAR point clouds. Data is acquired using the **Purdue Wheel-Based Mobile Mapping System (MMS)** along Indiana interstate highways. (Track 2: ProductPrototype)
 
 ### Key Contributions
 
