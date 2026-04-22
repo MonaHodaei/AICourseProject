@@ -70,7 +70,7 @@ Due to data sharing restrictions (INDOT–Purdue University research agreement) 
 |------|-------------|------|
 | `randlanet_semantic3d.pth` | Stage 1 pretrained checkpoint (Semantic3D benchmark) | [GOOGLE DRIVE LINK] |
 | `randlanet_Purdue.pth` | Stage 2 final checkpoint (fine-tuned on Purdue bridge components & highway infrusturcture dataset) | [GOOGLE DRIVE LINK] |
-| Trial test tile (`Test.txt`) | One preprocessed, labeled test tile for demo purposes | [GOOGLE DRIVE LINK] |
+| Trial test tiles (`Tilex__local_selected.txt`) | 4 preprocessed test tiles for demo purposes | [GOOGLE DRIVE LINK] |
 
 ### Setup after downloading
 
@@ -81,13 +81,16 @@ Due to data sharing restrictions (INDOT–Purdue University research agreement) 
    └── randlanet_Purdue.pth
    ```
 
-2. Place the trial test tile into the `Dataset/Test/` folder:
+2. Place the trial test tiles into the `Dataset/Test/` folder:
    ```
    Dataset/Test/
-   └── Test.txt
+   └── Tile1__local_selected.txt
+   └── Tile2__local_selected.txt
+   └── Tile3__local_selected.txt
+   └── Tile4__local_selected.txt
    ```
 
-The repo is then ready to run from **Step 3 (inference)** onwards using the trial tile and the provided Purdue checkpoint. To run the full pipeline from scratch including training, you will need to supply your own labeled dataset.
+The repo is then ready to run from **Step 3 (inference)** onwards using the trial tiles and the provided Purdue checkpoint. To run the full pipeline from scratch including training, you will need to supply your own labeled dataset.
 
 ---
 
@@ -211,7 +214,7 @@ RandLA-Net-pytorch/
 │   │   ├── 2.Localized/                   # After zero-centering (local coordinates)
 │   │   └── 3.Ordered/                     # After column reordering for model input
 │   ├── Train/                             # Labeled training tiles — not publicly available (INDOT–Purdue agreement); see Downloads for trial sample
-│   └── Test/                              # Labeled test tiles — trial sample available on Google Drive (see Downloads)
+│   └── Test/                              # Labeled test tiles — trial samples available on Google Drive (see Downloads)
 │
 ├── checkpoints/
 │   ├── randlanet_semantic3d.pth            # Stage 1: weights pretrained on the Semantic3D benchmark — download from Google Drive (see Downloads)
@@ -297,7 +300,7 @@ NUM_CLASSES   = 10     # Number of semantic classes (including unlabeled)
 NUM_NEIGHBORS = 16     # K nearest neighbors per point
 DECIMATION    = 4      # Downsampling ratio per encoder layer
 NUM_LAYERS    = 5      # Number of encoder/decoder stages
-NUM_POINTS    = 20480  # Points sampled per training tile (must be divisible by 4^5)
+NUM_POINTS    = 20480  # Points sampled per training tile (must be divisible by 4^5) Resolution of Point Cloud depends on GPU
 ```
 
 ---
