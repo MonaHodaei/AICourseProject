@@ -555,7 +555,7 @@ Training convergence (700 epochs, transfer learning):
 
 The LiDAR dataset used in this project was collected as part of a collaborative research project between the **Indiana Department of Transportation (INDOT)** and **Purdue University**. Due to the terms of this partnership, the full dataset cannot be publicly shared.
 
-4 small trial samples, preprocessed test tile, are available via Google Drive for demonstration and reproducibility purposes (see [Downloads](#downloads--data--checkpoints)). These tiles are sufficient to run Steps 3 and 4 of the pipeline (inference and evaluation) using the provided Purdue checkpoint.
+4 small trial samples, preprocessed test tile, are available via Google Drive for demonstration and reproducibility purposes (see [Downloads](#downloads--data--checkpoints)). These tiles are sufficient to run Step 3 of pipeline (inference) using the provided Purdue checkpoint.
 
 If you require access to additional data for research purposes, please contact my email.
 
